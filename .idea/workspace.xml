@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8af44df2-cd75-4962-843c-be8f019d0d28" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/.idea/admin_panel.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/assets/js/chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/assets/js/file-upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/assets/js/hoverable-collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/assets/js/misc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/assets/js/off-canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/assets/js/todo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/assets/js/todolist.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/gulp-tasks/inject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/gulp-tasks/serve.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_panel/gulp-tasks/vendors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/button.php" beforeDir="false" afterPath="$PROJECT_DIR$/bot/components/button.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/bot/components/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/func.php" beforeDir="false" afterPath="$PROJECT_DIR$/bot/components/func.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/bot/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/js/chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/js/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/assets/js/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/js/file-upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/js/hoverable-collapse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/js/misc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/js/off-canvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/js/todo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/js/todolist.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/vendors/css/vendor.bundle.base.css" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/assets/vendors/css/vendor.bundle.base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/assets/vendors/js/vendor.bundle.base.js" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/assets/vendors/js/vendor.bundle.base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/config/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/config/connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/gulp-tasks/inject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/gulp-tasks/serve.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/gulp-tasks/vendors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/main/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/main/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/main/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/main/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/main/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/main/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/vendor/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/vendor/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/vendor/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/vendor/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud/vendor/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/confirmed app/vendor/update.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HQsFxkksGYjZ3aJSAN8E3I4tBG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hp\Desktop\github\kitob_dokoni\bot\components" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8af44df2-cd75-4962-843c-be8f019d0d28" name="Changes" comment="" />
+      <created>1668228541438</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668228541438</updated>
+      <workItem from="1668228543104" duration="461000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

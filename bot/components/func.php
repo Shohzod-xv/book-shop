@@ -1,6 +1,6 @@
 <?php
 
-define('API_KEY','5111454354:AAGPjM4DUG3VMtPsHoCqQd--MhZ1jL1K4zw');
+define('API_KEY','API_KEY');
 
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -232,20 +232,6 @@ function send_korzina($cbid,$prid)
         return query("UPDATE `korzinka` SET `product_number` = {$jami} WHERE product_name = {$name}");
     }
 }
-// function send_korzinka2($cbid)
-// {
-//     $sorov = query("Select * from korzinka where user_id = {$cbid}");
-//     foreach ($sorov as $row):
-//         $user_id = $row['user_id'];
-//         $first_name = $row['first_name'];
-//         $phone_number = $row['phone_number'];
-//         $product_name = $row['product_name'];
-//         $product_price = $row['product_price'];
-//         $product_number = $row['product_number'];
-//     endforeach;
-//     return query("INSERT INTO dp_korzina(`user_id`,`first_name`,`phone_number`,`product_name`,`product_price`,`product_number`,`status`,`insert_date`)
-//                 VALUES ('{$user_id}','{$first_name}','{$phone_number}','{$product_name}','{$product_price}','{$product_number}','off',NOW())");
-// }
 
 
 

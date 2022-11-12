@@ -1,5 +1,5 @@
 <?php
-include "db.php";
+include "components/db.php";
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
 $cid = $message->chat->id;
