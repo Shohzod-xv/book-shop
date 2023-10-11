@@ -1,6 +1,6 @@
 <?php
 
-define('API_KEY','API_KEY');
+define('API_KEY','5939347329:AAH5el7Gry0CMTpnIReGzM04yFF6TU45ADY');
 
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -16,7 +16,7 @@ function bot($method,$datas=[]){
     }
 }
 function ttf($cbid){
-    return query("UPDATE `users` SET `ttf` = 1 WHERE user_id = '{$cbid}'");
+    return query("UPDATE users SET ttf = 1 WHERE user_id = '$cbid'");
 }
 function query($sorov)
 {
@@ -28,7 +28,7 @@ function fetch_array($var){
 }
 function check_user($first_name)
 {
-    $a = query("SELECT * FROM users WHERE first_name = '{$first_name}'");
+    $a = query("SELECT * FROM users WHERE first_name = '$first_name'");
 
     if (mysqli_num_rows($a) == 0)
         return false;
@@ -37,26 +37,26 @@ function check_user($first_name)
 }
 function phone(){
     global $user_id;
-    $phone = query("SELECT * FROM users WHERE user_id = '{$user_id}'");
+    $phone = query("SELECT * FROM users WHERE user_id = '$user_id'");
     foreach ($phone as $phones)
         return $phones['phone_number'];
 }
 function product_name($id){
 
-    $products  = query("select * from products where id = {$id}");
+    $products  = query("select * from products where id = '$id'");
     foreach ($products as $product):
-        return $a = $product['product_name'];
+        return $product['product_name'];
     endforeach;
 }
 function pp($id){
 
-    $products  = query("select * from `products` where `id` = {$id}");
+    $products  = query("select * from products where id = '$id'");
     foreach ($products as $product):
         return $product['product_price'];
     endforeach;
 }
 function sendData($cbid,$miid,$cid){
-    $k = query("SELECT * FROM korzinka WHERE user_id = {$cbid}");
+    $k = query("SELECT * FROM korzinka WHERE user_id = '$cbid'");
     while ($row = mysqli_fetch_assoc($k)) {
         $fn = $row["first_name"];
         $tel = $row["phone_number"];
@@ -77,48 +77,47 @@ function sendData($cbid,$miid,$cid){
 
 function deleteData($cbid)
 {
-    return query("DELETE FROM korzinka WHERE user_id = '{$cbid}'");
+    return query("DELETE FROM korzinka WHERE user_id = '$cbid'");
 }
-function deleteMenu($cid)
+function deleteMenu($cbid)
 {
-    return query("DELETE FROM savat WHERE user_id = '{$cid}'");
+    return query("DELETE FROM savat WHERE user_id = '$cbid'");
 }
 function update_phone($PhoneNumber)
 {
     global $user_id;
-    $number = query("UPDATE users SET phone_number = '{$PhoneNumber}' WHERE user_id = '{$user_id}'");
+    $number = query("UPDATE users SET phone_number = '$PhoneNumber' WHERE user_id = '$user_id'");
     return $number;
 }
 function user_delete($data)
 {
     if (mb_stripos($data, "sendkorzinka") !== false) {
         $id = explode("_", $data)[1];
-        return query("DELETE FROM `savat` WHERE `id` = '{$id}'");
+        return query("DELETE FROM savat WHERE id = '$id'");
     }
 }
 function user_id($user_id)
 {
-    $a = query("INSERT INTO savat(`user_id`,`insert_date`) values('{$user_id}',NOW())");
-    return $a;
+    return query("INSERT INTO savat(user_id,insert_date) values('$user_id',NOW())");
 }
 
 function product_write($tx,$user_id,$id)
 {
-    $sorov = query("Select * from savat where user_id = {$user_id}");
+    $sorov = query("Select * from savat where user_id = '$user_id'");
     foreach ($sorov as $pname):
         $name = $pname['product_name'];
     endforeach;
     if ($tx !== $name) {
-        $price = query("SELECT * FROM products where id = {$id}");
+        $price = query("SELECT * FROM products where id = '$id'");
         foreach ($price as $prices) :
             $p = $prices['product_price'];
-            return query("INSERT INTO savat(`user_id`,`product_name`,`product_price`,`product_number`,`insert_date`) values('{$user_id}','{$tx}','{$p}',1,NOW())");
+            return query("INSERT INTO savat(user_id,product_name,product_price,product_number,insert_date) values('$user_id','$tx','$p',1,NOW())");
         endforeach;
     }
 }
 function korzina($cid)
 {
-    $k = query("SELECT * FROM korzinka WHERE user_id = {$cid}");
+    $k = query("SELECT * FROM korzinka WHERE user_id = '$cid'");
     if (mysqli_num_rows($k) > 0) {
         while ($row = mysqli_fetch_assoc($k)) {
             $pn = $row["product_name"];
@@ -161,7 +160,7 @@ function korzina($cid)
 }
 function korzina_inline($cbid,$mid,$mmid)
 {
-    $k = query("SELECT * FROM korzinka WHERE user_id = {$cbid}");
+    $k = query("SELECT * FROM korzinka WHERE user_id = '$cbid'");
     if (mysqli_num_rows($k) > 0) {
         while ($row = mysqli_fetch_assoc($k)) {
             $pn = $row["product_name"];
@@ -206,30 +205,29 @@ function korzina_inline($cbid,$mid,$mmid)
         ]);
     }
 }
-function send_korzina($cbid,$prid)
+function send_korzina($cbid,$id)
 {
-    $sava = query("SELECT * FROM savat where id = {$prid}");
-    foreach ($sava as $savat) :
-        $product_name = $savat['product_name'];
-        $product_price = $savat['product_price'];
-        $product_number = $savat['product_number'];
+    $baskets = query("SELECT * FROM savat where id = '$id'");
+    $users = query("SELECT * FROM users where user_id = '$cbid'");
+    $korzinkas= query("SELECT * from korzinka where user_id = '$cbid'");
+    foreach ($baskets as $basket) :
+        $pname = $basket['product_name'];
+        $price = $basket['product_price'];
+        $quantity = $basket['product_number'];
     endforeach;
-    $user = query("SELECT * FROM `users` where `user_id` = {$cbid}");
-    foreach ($user as $users) :
-        $first_name = $users['first_name'];
-        $phone_number = $users['phone_number'];
+    foreach ($users as $user) :
+        $first_name = $user['first_name'];
+        $phone_number = $user['phone_number'];
     endforeach;
-    $son = query("SELECT * from korzinka where user_id = {$cbid}");
-    foreach ($son as $soni):
-        $name = $soni['product_name'];
-        $sonn = $soni['product_number'];
+    foreach ($korzinkas as $korzinka):
+        $name = $korzinka['product_name'];
+        $sonn = $korzinka['product_number'];
     endforeach;
-    $jami = $product_number+$sonn;
-    if ($name != $product_name) {
-        return query("INSERT INTO korzinka(`user_id`,`first_name`,`phone_number`,`product_name`,`product_price`,`product_number`,`insert_date`)
-                VALUES ('{$cbid}','{$first_name}','{$phone_number}','{$product_name}','{$product_price}','{$product_number}',NOW())");
+    $jami = $quantity+$sonn;
+    if ($pname !== $name) {
+        query("INSERT INTO korzinka(user_id, first_name, phone_number, product_name, product_price, product_number, insert_date) VALUES('$cbid', '$first_name', '$phone_number', '$pname', '$price', '$jami', NOW())");
     } else {
-        return query("UPDATE `korzinka` SET `product_number` = {$jami} WHERE product_name = {$name}");
+        return query("UPDATE korzinka SET product_number='$jami' WHERE product_name = '$name'");
     }
 }
 
